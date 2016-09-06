@@ -17,7 +17,7 @@ namespace GetARoom.Test.Output
 {
     public class TestMethods
     {
-
+  
 
         #region Tests
 
