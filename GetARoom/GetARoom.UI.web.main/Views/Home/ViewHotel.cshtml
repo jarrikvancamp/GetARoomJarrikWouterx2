@@ -1,0 +1,207 @@
+﻿@model GetARoom.DAL.Hotel
+
+@{
+    ViewBag.Title = "ViewHotel";
+}
+
+
+<div class="jumbotron">
+
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-6">
+            <h3>
+                @Html.DisplayFor(m => m.HotelName)
+                <br />
+                <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+            </h3>
+            <img class="media-object img-rounded img-responsive" src="../images/rooms/hr3.jpg" alt="placehold.it/350x250">
+
+
+
+
+
+        </div>
+
+        <div class="col-xs-6 col-sm-6">
+            <h3>Actions</h3>
+            <div class="list-group">
+                <div class="list-group-item" href="#">
+                    <button type="button" class="btn btn-primary btn-lg btn3d"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-primary btn-lg btn3d"><i class="fa fa-bed" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-primary btn-lg btn3d" data-toggle="modal" data-target="#phonenumber"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-primary btn-lg btn3d"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                    
+                </div>
+            </div>
+
+            <h3>Features</h3>
+            <div class="list-group">
+                <a class="list-group-item" href="#"><i class="fa fa-wifi fa-fw fa-3x" aria-hidde="true"></i>&nbsp; Wifi</a>
+                <a class="list-group-item" href="#"><i class="fa fa-car fa-fw fa-3x" aria-hidde="true"></i>&nbsp; Garage</a>
+                <a class="list-group-item" href="#"><i class="fa fa-life-ring fa-fw fa-3x" aria-hidde="true"></i>&nbsp; Swimming Pool</a>
+            </div>
+
+
+        </div>
+    <!-- modal-->
+        <div class="modal fade" id="phonenumber" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Hotel Contact Info</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>You can call this hotel at @Html.DisplayFor(m => m.Phonenumber).</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- einde modal -->
+
+        <div class="">
+            <h3>Info</h3>
+            <div class="list-group">
+                <a class="list-group-item" href="#">
+                    The hotel rooms are bright and have air conditioning, coffee and tea facilities and a flat-screen TV. You can enjoy a free selection of new films and blockbusters in your room. For breakfast you can choose from a selection of hot and cold dishes.
+                    <br />
+                    <br />
+                    The fitness centre offers a relaxing setting after a business meeting or a busy day of shopping. The bar serves Belgian beers and cocktails.
+
+                    The pentalounge provides a wide selection of international food and drinks.
+                    <br />
+                    <br />
+                    pentahotel Brussels City Centre is a 5-minute car drive away from Brussels-South Train Station, which offers Thalys and Eurostar connections to international destinations. The surrounding area offers many restaurants and cafés. The Louise metro station is a 7-minute walk away.
+                </a>
+
+            </div>
+        </div>
+
+
+    </div> <!-- row -->
+
+</div> <!-- einde jumbotron -->
+
+
+<!-- rooms -->
+
+<h2>Rooms</h2>
+
+
+<div class="well">
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img width="300" class="media-object img-rounded img-responsive" src="../images/rooms/double1.jpg">
+        </a>
+        <p class="pull-right"><button type="button" class="btn btn-success btn-lg btn3d"><i class="fa fa-bed" aria-hidden="true"></i></button></p>
+        <div class="media-body">
+            <h4 class="media-heading">Double Room</h4>
+
+            <p>Cozy Double Room with a nice view on the city.</p>
+            <p>Room Facilities: Safe, Air conditioning, Iron, Desk, Ironing facilities, Shower, Bathtub, Hairdryer, Free toiletries, Toilet, Pay-per-view channels, TV, Telephone, Radio, Minibar.</p>
+            <ul class="list-inline list-unstyled">
+                <li><span><i class="glyphicon glyphicon-calendar"></i> €75 / night |</span></li>
+                <li>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </li>
+                <li>|</li>
+                <li>
+                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> <!-- einde well --> 
+
+<div class="container">
+
+    <!-- review -->
+    <h2>Reviews</h2>
+    <div class="review-block">
+
+        <!-- review element -->
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="http://dummyimage.com/60x60/666/ffffff&amp;text=No+Image" class="img-rounded">
+                <div class="review-block-name"><a href="#">nktailor</a></div>
+                <div class="review-block-date">January 29, 2016<br>1 day ago</div>
+            </div>
+            <div class="col-sm-9">
+                <div class="review-block-rate">
+                    <button style="pointer-events: none" type="button" class="btn btn-warning btn-lg btn3d" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lg btn3d" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lg btn3d" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn3d btn btn-white btn-lg" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn3d btn btn-white btn-lg" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="review-block-title">this was nice in buy</div>
+                <div class="review-block-description">this was nice in buy. this was nice in buy. this was nice in buy. this was nice in buy this was nice in buy this was nice in buy this was nice in buy this was nice in buy</div>
+            </div>
+        </div>
+        <hr>
+
+
+        <!-- einde review element -->
+        <!-- review element -->
+        <div ng-repeat="review in vm.reviews">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="http://dummyimage.com/60x60/666/ffffff&amp;text=No+Image" class="img-rounded">
+                <div class="review-block-name"><a href="#">nktailor</a></div>
+                <div class="review-block-date">{{review.ReviewDate| date:"yyyy-MM-dd"}}</div>
+            </div>
+            <div class="col-sm-9">
+                <div class="review-block-rate">
+                    @{int rating = 4 ;}  
+                    @for (var i = 0; i < 5; i++)
+                    {
+                        var style = (i < rating) ? "btn btn-warning btn-lg btn3d" : "btn3d btn btn-white btn-lg";
+
+                        <button style="pointer-events: none" type="button" class="@style" aria-label="Left Align">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </button>
+                    }
+
+                    
+                   
+                </div>
+                <div class="review-block-title">{{review.ReviewHeader}}</div>
+                <div class="review-block-description">{{review.ReviewDescription}}</div>
+            </div>
+                
+        </div>
+        <hr>
+    </div>
+
+        <!-- einde review element -->
+
+
+    </div> <!-- review block-->
+    <!-- einde review -->
+
+
+</div> <!-- /container -->
+
+@section scripts{
+<script src="~/app/Loader.js"></script>
+<script src="~/app/Scripts/Main.js"></script>    
+}

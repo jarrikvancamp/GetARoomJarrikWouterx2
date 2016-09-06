@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5965E15-543D-4ACB-BA15-78EB8598FA5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GetARoom.DAL</RootNamespace>
+    <AssemblyName>GetARoom.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Amenity.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AmenityForHotel.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Asset.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEntity.cs" />
+    <Compile Include="BaseObjectsWithID.cs" />
+    <Compile Include="Booking.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Creditcard.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Geolocation.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetARoomEntities.cs" />
+    <Compile Include="GetARoomModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetARoomModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetARoomModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetARoomModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetARoomModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Location.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentTypeForUser.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Picture.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PictureForHotel.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PictureForRoom.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Postal.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Review.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewForBooking.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Room.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomAsset.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomForHotel.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoomSize.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecificRepositories\Interfaces\IAddressRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IAmenityForHotel.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IBookingRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\ILocationRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IPaymentForUserRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IPaymentRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IPictureForHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IPictureForRoomRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IReviewForBookingRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IReviewRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IRoomAssetRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IRoomForHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IRoomRepository.cs" />
+    <Compile Include="SpecificRepositories\Interfaces\IUnitOfWork.cs" />
+    <Compile Include="SpecificRepositories\Repositories\AddressRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\AmenityForHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\BookingRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\HotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\LocationRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\PaymentForUserRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\PaymentRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\PictureForHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\PictureForRoomRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\ReviewForBookingRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\ReviewRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\RoomAssetRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\RoomForHotelRepository.cs" />
+    <Compile Include="SpecificRepositories\Repositories\RoomRepository.cs" />
+    <Compile Include="SpecificRepositories\UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoles.cs">
+      <DependentUpon>GetARoomModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="GetARoomModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GetARoomModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="GetARoomModel.edmx.diagram">
+      <DependentUpon>GetARoomModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GetARoomModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GetARoomModel.edmx</DependentUpon>
+      <LastGenOutput>GetARoomModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GetARoomModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GetARoomModel.edmx</DependentUpon>
+      <LastGenOutput>GetARoomModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

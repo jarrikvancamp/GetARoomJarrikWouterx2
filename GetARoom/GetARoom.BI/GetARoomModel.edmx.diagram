@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3fc1ffc8aba146039b018be83529eb8f" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="GetARoomModel.Account" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Address" Width="1.5" PointX="12" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Amenity" Width="1.5" PointX="16.5" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.AmenityForHotel" Width="1.5" PointX="18.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Asset" Width="1.5" PointX="6" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Booking" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Creditcard" Width="1.5" PointX="6" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Geolocation" Width="1.5" PointX="12" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Hotel" Width="1.5" PointX="16.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Location" Width="1.5" PointX="14.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Payment" Width="1.5" PointX="7.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.PaymentTypeForUser" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Person" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Picture" Width="1.5" PointX="16.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.PictureForHotel" Width="1.5" PointX="18.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.PictureForRoom" Width="1.5" PointX="21.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Postal" Width="1.5" PointX="9.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Review" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.ReviewForBooking" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Role" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.Room" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.RoomAsset" Width="1.5" PointX="8.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.RoomSize" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.User" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="GetARoomModel.UserRoles" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="GetARoomModel.FK_User_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Address_Postal" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Location_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_AmenityForHotel_Amenity" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_AmenityForHotel_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_RoomAsset_Asset" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Booking_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Booking_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Payment_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_ReviewForBooking_Booking" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PaymentTypeForUser_Creditcard" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Location_Geolocation" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_Hotel_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PictureForHotel_Hotel" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PaymentTypeForUser_User" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_User_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PictureForHotel_Picture" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PictureForRoom_Picture" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_PictureForRoom_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_ReviewForBooking_Review" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_UserRoles_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK__Room__RoomsizeId__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_RoomAsset_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="GetARoomModel.FK_UserRoles_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GetARoomModel.RoomForHotel" Width="1.5" PointX="21.75" PointY="13.375" />
+        <AssociationConnector Association="GetARoomModel.FK_RoomForHotel_Hotel" />
+        <AssociationConnector Association="GetARoomModel.FK_RoomForHotel_Room" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

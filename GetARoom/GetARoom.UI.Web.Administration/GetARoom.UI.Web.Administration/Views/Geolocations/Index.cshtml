@@ -1,0 +1,39 @@
+﻿@model IEnumerable<GetARoom.DAL.Geolocation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GeoLatitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeoLongitude)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeoLatitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeoLongitude)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GeolocationId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GeolocationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GeolocationId })
+        </td>
+    </tr>
+}
+
+</table>

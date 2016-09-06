@@ -1,0 +1,34 @@
+﻿@model GetARoom.DAL.Amenity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Amenity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Amenity1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amenity1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmenityDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmenityDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AmenityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

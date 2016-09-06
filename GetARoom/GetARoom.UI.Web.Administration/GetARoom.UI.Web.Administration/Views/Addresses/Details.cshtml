@@ -1,0 +1,58 @@
+﻿@model GetARoom.DAL.Address
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Address</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressStreetname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressStreetname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressBus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressBus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressLand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressLand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Postal.PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postal.PostalCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AddressId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

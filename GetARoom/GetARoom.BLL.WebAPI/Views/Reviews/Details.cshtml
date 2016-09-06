@@ -1,0 +1,58 @@
+﻿@model GetARoom.DAL.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewHeader)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewHeader)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewScore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewScore)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

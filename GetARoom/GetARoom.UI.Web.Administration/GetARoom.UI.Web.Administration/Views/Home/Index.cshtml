@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Get a Room administration page.</h1>
+    <p class="lead">This page is intended for an admin of the GetARoom page.</p>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Assets</h2>
+        <p>
+            You can change the Asset objects here.
+            - Contains (id, name)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:30%; background-color:#BBBBBB; border-radius: 10px 10px;">
+                @Html.ActionLink("Asset", "Index", "Assets")
+            </p>
+        </center>
+    </div>
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Addresses</h2>
+        <p>
+            You can change the Address objects here.
+            - Contains (postal code, street, number , bus)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Addresses", "Index", "Addresses")
+            </p>
+        </center>
+    </div>
+
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Amenities</h2>
+        <p>
+            You can change the Address objects here.
+            - Contains (name and description)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Amenities", "Index", "Amenities")
+            </p>
+        </center>
+    </div>
+
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Bookings</h2>
+        <p>
+            You can change the Address objects here.
+            - Contains (from, to, now, room)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Booking", "Index", "Bookings")
+            </p>
+        </center>
+    </div>
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Geolocations</h2>
+        <p>
+            You can change the Address objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Geolocations", "Index", "Geolocations")
+            </p>
+        </center>
+    </div>
+
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Hotels</h2>
+        <p>
+            You can change the Hotels objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Hotels", "Index", "Hotels")
+            </p>
+        </center>
+    </div>
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Locations</h2>
+        <p>
+            You can change the Hotels objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Locations", "Index", "Locations")
+            </p>
+        </center>
+    </div>
+
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Payments</h2>
+        <p>
+            You can change the Payments objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Payments", "Index", "Payments")
+            </p>
+        </center>
+    </div>
+
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Person</h2>
+        <p>
+            You can change the Person objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Person", "Index", "Person")
+            </p>
+        </center>
+    </div>
+    <div class="col-md-4" style="border:1px solid black; border-radius:8px 8px">
+        <h2>Pictures</h2>
+        <p>
+            You can change the Pictures objects here.
+            - Contains (lat and long)
+        </p>
+        <center>
+            <p style="font-size:20px; font-weight:bold;border:10px solid #999999;
+        width:50%; background-color:#BBBBBB; border-radius: 10px 10px">
+                @Html.ActionLink("Pictures", "Index", "Pictures")
+            </p>
+        </center>
+    </div>
+</div>

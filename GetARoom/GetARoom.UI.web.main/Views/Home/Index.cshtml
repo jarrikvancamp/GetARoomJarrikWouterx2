@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Get A Room!</title>
+    <script src="~/js/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/app/Scripts/Routingapp.js"></script>
+    <script src="~/app/Scripts/FormValidations.js"></script>
+    <script src="~/app/Components/HotelTile.js"></script>
+    <script src="~/app/Controllers/ViewHotelController.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+
+    <link href="~/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <link href="~/css/3Dbuttons.css" rel="stylesheet">
+    <link href="~/css/reviews.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.js"></script>
+
+    <script>
+$(document).ready(function(){
+$('#depature').datepicker({
+    startDate: "today",
+    maxViewMode: 0,
+    todayBtn: true,
+    orientation: "bottom auto",
+    calendarWeeks: true,
+    todayHighlight: true,
+    toggleActive: true
+});
+$('#arrival').datepicker({
+    startDate: "today",
+    maxViewMode: 0,
+    todayBtn: true,
+    orientation: "bottom auto",
+    calendarWeeks: true,
+    todayHighlight: true,
+    toggleActive: true
+});
+});
+    </script>
+
+</head>
+
+<body ng-app="routing">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Get A Room</a>
+               
+              
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a ui-sref="hotels" ui-sref-active="active">Hotels</a></li>
+                    <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                </form>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Get A Room</h1>
+            <p>Get A Room is world's first class hotel-booking service. Find a hotel room in more a selection of more than 1000 hotels all over the globe!</p>
+            <img class="img-responsive" src="../images/banner_1.jpg">
+
+            <center>
+                <h2>Find a hotel that suits you right now!</h2>
+                <form class="form-inline" name="searchhotels" role="form" ng-controller="validateDate" novalidate>
+                    <div class="form-group">
+                        <label for="arrival">Arrival date:</label>
+                        <input type="text" class="form-control" id="arrival" name="arrival" placeholder="click to select" ng-model="arrivaldate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="depature">Depature date:</label>
+                        <input type="text" class="form-control" id="depature" name="departure" placeholder="click to select" ng-model="departuredate" required>
+                    </div>
+                    <span ng-show="DateNotOk">date invalid</span>
+
+                    <div class="form-group">
+                        <label for="adults">Adults</label>
+
+                        <select id="adults" name="adults" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="children">Children</label>
+
+                        <select id="children" name="children" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+                    </div>
+
+                    <br/>
+                    <!--
+                        
+                    
+                       <span ng-show="IsWouter">Emails have to match!</span>
+                    <span style="color:red" ng-show="searchhotels.arrival.$invalid">
+                        <span ng-show="searchhotels.arrival.$error.required">Email is required.</span>
+                        <span ng-show="searchhotels.depature.$error.required">Invalid email address.</span>
+                    </span>
+                         -->
+
+                </form>
+            </center>
+            
+            <center>
+                
+                <br>
+                <input type="submit" class="btn btn-lg btn-success" value="Search"/>
+            </center>
+            
+        </div>
+
+        
+    </div>
+
+
+    <div class="container">
+        
+
+        <ui-view></ui-view>
+
+        <div style="clear:both"></div>
+    </div> <!-- einde container -->
+    <footer>
+        <p class="navbar-text pull-left">© 2016 - Get A Room.</p>
+
+        <p class="navbar-text pull-right">
+            <img src="~/images/payment-methods.png">
+        </p>
+    </footer>
+
+</body>
+</html>

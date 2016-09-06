@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <script src="~/js/angular.min.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/app/Scripts/Routingapp.js"></script>
+    <script src="~/app/Components/HotelTile.js"></script>
+    <script src="~/app/Controllers/ViewHotelController.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/css/routing.css">
+    <style>
+        .active {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-app="routing">
+
+    <div id="container">
+        <h1>Get A Room</h1>
+        <nav>
+            <ul>
+                <li><a ui-sref="hello" ui-sref-active="active">Hello</a></li>
+                <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+            </ul>
+
+
+
+            <div id="searchimg">
+                <img src="../images/banner_1.jpg" />
+
+
+
+                <div id="searchform">
+                    <form>
+                        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                        <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                        <input type="submit" value="Zoeken" />
+                    </form>
+                </div>
+            </div>
+
+        </nav>
+        <ui-view></ui-view>
+        
+        <div style="clear:both"></div>
+    </div> <!-- einde container -->
+
+    
+</body>
+</html>

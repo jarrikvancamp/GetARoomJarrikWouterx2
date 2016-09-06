@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GetARoom.DAL.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonLastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonFirstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersondateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonaddressId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personemail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonLastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonFirstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersondateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonaddressId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personemail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PersonId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PersonId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PersonId })
+        </td>
+    </tr>
+}
+
+</table>

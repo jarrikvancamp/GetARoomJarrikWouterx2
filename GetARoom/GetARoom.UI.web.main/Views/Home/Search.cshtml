@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+@Html.Partial("~/Views/Included/SearchJumbotron.cshtml")
+
+
+@section scripts{
+<script>
+$(document).ready(function(){
+$('#depature').datepicker({
+    startDate: "today",
+    maxViewMode: 0,
+    todayBtn: true,
+    orientation: "bottom auto",
+    calendarWeeks: true,
+    todayHighlight: true,
+    toggleActive: true
+});
+$('#arrival').datepicker({
+    startDate: "today",
+    maxViewMode: 0,
+    todayBtn: true,
+    orientation: "bottom auto",
+    calendarWeeks: true,
+    todayHighlight: true,
+    toggleActive: true
+});
+});
+</script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <link href="/css/bootstrap-datepicker.css" rel="stylesheet">
+    }

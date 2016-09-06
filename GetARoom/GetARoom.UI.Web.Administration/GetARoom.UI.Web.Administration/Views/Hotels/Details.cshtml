@@ -1,0 +1,58 @@
+﻿@model GetARoom.DAL.Hotel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hotel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotelName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phonenumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phonenumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotelDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HotelRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HotelRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.LocationId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HotelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
