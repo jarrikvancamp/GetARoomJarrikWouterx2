@@ -311,11 +311,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GetARoom.BI\GetARoom.DAL.csproj">
+    <ProjectReference Include="..\GetARoom.BI\GetARoom.DAL.csproj">
       <Project>{b5965e15-543d-4acb-ba15-78eb8598fa5a}</Project>
       <Name>GetARoom.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\GetARoom.Validation\GetARoom.BLL.csproj">
+    <ProjectReference Include="..\GetARoom.Validation\GetARoom.BLL.csproj">
       <Project>{f17a0808-f891-4a3d-b923-f1aaa2ea09db}</Project>
       <Name>GetARoom.BLL</Name>
     </ProjectReference>
