@@ -12,15 +12,18 @@
         android:text="@string/strBtnMainSearchARoom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMainSearchARoom" />
+        android:id="@+id/btnMainSearchARoom"
+        android:layout_marginTop="50.0dp" />
     <Button
         android:text="@string/strBtnMyRooms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMyRooms" />
+        android:id="@+id/btnMyRooms" 
+        android:layout_marginTop="5dp" />
     <Button
         android:text="@string/strBtnMainSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMainSettings" />
+        android:id="@+id/btnMainSettings" 
+        android:layout_marginTop="5dp" />
 </LinearLayout>
