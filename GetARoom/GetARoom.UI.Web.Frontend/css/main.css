@@ -1,0 +1,211 @@
+body{
+    background-color:gainsboro!important;
+}
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    font-family:Arial;
+    color:#484848;
+}
+
+ul {
+    margin:0!important;
+    padding:0;
+    list-style-type:none;
+    background-color:#484848 ;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+li {
+    display:inline-block;
+    color:white;
+    padding:10px 5px 5px 10px;
+
+}
+
+li:hover {
+    cursor:pointer;
+    
+}
+
+.bannerImg {
+    width: 100%;
+}
+
+.formStyle {
+    text-align:center;
+    width:100%;
+    background-color: rgba(0,0,0,0.6);
+    position:absolute;
+    padding-top:20px;
+    padding-bottom:20px;
+    bottom:5px
+}
+
+.formStyle input {
+    width:20%;   
+}
+
+.formStyle button {
+    width:10%;
+}
+
+.searchBanner {
+    position:relative;
+}
+
+h2 {
+    display:block;
+    text-align: center;
+}
+
+h4{
+    text-align:center;
+}
+
+#formStyleSearch {
+    text-align:center;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20px;
+    bottom:5px
+}
+#formStyleSearch input {
+    height:20px;
+    border-radius:3px;
+    border:2px solid lightgrey;
+}
+#formStyleSearch input {
+    height:30px;
+    border-radius:3px;
+    border:2px solid lightgrey;
+    outline:none;
+    transition: border 1s;
+}
+#formStyleSearch input:focus {
+    border:2px solid black;
+}
+.hotel{
+    background:white;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    width:100%;
+}
+.hotel img{
+    width:350px;
+}
+.hotel h3{
+    margin-top:5px!important;
+    margin-bottom:0px!important;
+}
+.hotel div{
+    float:right;
+    width:60%;    
+}
+.hotel hr{
+    margin-top:10px;
+    border-top: 1px solid #333!important;
+    height: 1px;
+    color:black;
+}
+.hotel button {
+    color:black;
+    background-color:white;
+    border: 2px solid black;
+    padding:5px 10px 5px 10px;
+    font-weight:bold;
+    transition:background-color 1s;
+    transition:color 1s ease;
+    transition:border 1s;
+    
+}
+.hotel button:hover {
+    color:white;
+    background-color:black;
+    border:2px solid white;
+}
+
+.hotelIndexArticle {
+    background-color:white;
+    width: 320px;
+    margin: 5px;
+    display: inline-block;
+    padding: 3px;
+}
+
+.hotelIndexArticle img {
+    width:314px;
+}
+
+#btnGetAllHotels{
+    margin-top: 10px;
+    background-color:white;
+    height:50px;
+    width:300px;
+}
+
+footer p {
+    text-align:center;
+    
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+#detailsImg {
+   margin:10px; 
+   margin-top:20px;
+   width:55%;
+}
+
+#detailsAsideImg {
+    border: solid;
+    border-bottom-color: black;
+    margin-top:20px;
+    width:42%;
+    float:right;
+}
+
+#detailsAsideImg button {
+    background-color:white;
+    height:30px;
+    width:100px;
+}
+
+#prijs {
+    display:inline;
+    float:right;
+   font-size:large;
+}
+
+#detailsRoomDescr {
+    border: solid;
+    border-bottom-color: red;
+}
+
+#detailsShowReview {
+    border: solid;
+    border-bottom-color: red;
+    width:55%;
+    float:left;
+}
+
+#detailsMakeReview {
+    border: solid;
+    border-bottom-color: red;
+    width:45%;
+    float:right;
+    padding:5px;
+}
+
+#txtArea {
+   margin-top:5px;
+}
+
+#detailsMakeReview button {
+    background-color:white;
+    height:30px;
+    width:150px;
+}

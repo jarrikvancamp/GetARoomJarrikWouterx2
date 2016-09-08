@@ -1,0 +1,23 @@
+﻿<div class="searchBanner">
+    <img class="bannerImg" src="images/banner_homepage.jpg" />
+    <form class="formStyle" method="put">
+        <input type="text" placeholder="Where to go?" />
+        <input type="text" placeholder="Arrival" />
+        <input type="text" placeholder="Departure" />
+        <button type="submit">Search</button>
+    </form>
+</div>
+<section>
+    <h2>Populaire hotels</h2>
+    <!--<div ng-if="vm.hotelsLoading">
+        loading...
+    </div>
+    <div ng-controller="vm.hotelsLoaded">-->
+    <div ng-controller="IndexController as vm">
+        <hotel-index-tile hotel="item" ng-repeat="item in vm.items track by item.ID"></hotel-index-tile>
+    </div>
+    <!--</div>-->
+</section>
+<center>
+    <button ui-sref="hotels" id="btnGetAllHotels">Get all hotels</button>
+</center>
