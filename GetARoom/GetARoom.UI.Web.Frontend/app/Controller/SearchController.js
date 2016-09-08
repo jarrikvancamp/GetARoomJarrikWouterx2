@@ -5,7 +5,7 @@ function SearchController($http) {
     vm.items = [];
     function getItems() {
 
-        $http({ method: 'GET', url: 'http://localhost:61560/hotels' })
+        $http({ method: 'GET', url: 'http://localhost:61000/api/hotel' })
             .success(function (data, status) {
                 vm.items = data;
             })
@@ -13,6 +13,4 @@ function SearchController($http) {
                 alert("Error");
             });
     };
-
-    getItems();
 }
