@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">GetARoom.UI.Mobile</string>
+    <string name="ApplicationName">Get A Room</string>
+    <string name="strBtnMainSearchARoom">Search A Room</string>
+    <string name="strBtnMyRooms">My Rooms</string>
+    <string name="strBtnMainSettings">Settings</string>
+
 </resources>
