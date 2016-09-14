@@ -230,6 +230,7 @@
     <Compile Include="Controllers\ReviewViewModelController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\RoomViewModelController.cs" />
+    <Compile Include="Controllers\TopHotelController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
