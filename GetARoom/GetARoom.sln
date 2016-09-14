@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetARoom.UI.Mobile", "GetAR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetARoom.UI.Web.Administration", "GetARoom.UI.Web.Administration\GetARoom.UI.Web.Administration.csproj", "{6992F914-781D-4AC9-A589-E298B38CBBDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kickstarter.Frontend", "GetARoom.UI.Web.Frontend\Kickstarter.Frontend.csproj", "{31A5AA4B-8608-4363-B929-FDA0D4D4A0B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{6992F914-781D-4AC9-A589-E298B38CBBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6992F914-781D-4AC9-A589-E298B38CBBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6992F914-781D-4AC9-A589-E298B38CBBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A5AA4B-8608-4363-B929-FDA0D4D4A0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A5AA4B-8608-4363-B929-FDA0D4D4A0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A5AA4B-8608-4363-B929-FDA0D4D4A0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A5AA4B-8608-4363-B929-FDA0D4D4A0B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,18 @@
+﻿<img class="bannerImg" src="images/banner_1.jpg" />
+
+<form class="form-inline" id="formStyleSearch" method="put">
+    <input type="text" class="form-control" placeholder="Where to go?" />
+    <div class="input-group" id="inputSearch">
+        <input class="form-control" id="datepicker" type="date" placeholder="Departure">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    </div>
+    <div class="input-group" id="inputSearch">
+        <input class="form-control" id="datepicker" type="date" placeholder="Arrival">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    </div>
+    <button type="submit">Search</button>
+</form>
+
+<div>
+    <hotel-search-tile hotel="item" ng-repeat="item in vm.items track by item.HotelId"></hotel-search-tile>
+</div>
