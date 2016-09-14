@@ -13,7 +13,8 @@
             .state('hotels', {
                 url: '/hotels',
                 templateUrl: 'app/html/hotelView.html',
-                controller: 'SearchController'
+                controller: 'SearchController',
+                controllerAs: 'vm'
             })
               .state('hotelDetails', {
                   url: '/hotels/:hotelid',

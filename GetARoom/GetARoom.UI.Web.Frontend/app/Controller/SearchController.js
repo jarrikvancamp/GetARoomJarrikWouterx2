@@ -1,5 +1,7 @@
 ﻿angular.module('getARoom').controller('SearchController', SearchController);
 
+SearchController.$inject = ['$http'];
+
 function SearchController($http) {
     var vm = this;
     vm.items = [];
@@ -13,4 +15,5 @@ function SearchController($http) {
                 alert("Error");
             });
     };
+    getItems();
 }

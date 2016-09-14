@@ -13,6 +13,6 @@
     <button type="submit">Search</button>
 </form>
 
-<div ng-controller="SearchController as vm">
+<div>
     <hotel-search-tile hotel="item" ng-repeat="item in vm.items track by item.HotelId"></hotel-search-tile>
 </div>

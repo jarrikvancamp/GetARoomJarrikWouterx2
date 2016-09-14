@@ -7,9 +7,8 @@ function IndexController($http) {
     vm.items = [];
     function getItems() {
 
-        $http({ method: 'GET', url: 'http://localhost:61560/TopHotels'})
-            .success(function (data, status) {
-                
+        $http({ method: 'GET', url: 'http://localhost:61000/api/hotel' })
+            .success(function (data, status) {  
                 vm.items = data;
             })
             .error(function (data, status) {
