@@ -19,7 +19,8 @@
               .state('hotelDetails', {
                   url: '/hotels/:hotelid',
                   templateUrl: 'app/html/detailsView.html',
-                  controller: 'DetailsController'
+                  controller: 'DetailsController',
+                  controllerAs: 'vm'
               })
                .state('about', {
                    url: '/about',
