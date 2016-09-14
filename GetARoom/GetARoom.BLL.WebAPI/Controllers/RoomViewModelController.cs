@@ -7,9 +7,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace GetARoom.BLL.WebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RoomViewModelController : ApiController
     {
         UnitOfWork unit = new UnitOfWork(new GetARoomEntities());
@@ -44,7 +46,7 @@ namespace GetARoom.BLL.WebAPI.Controllers
         private Picture GetRoomPicture(int id)
         {
             var picture = new Picture();
-            //  throw new NotImplementedException();
+            picture = unit.PicturesForRoom.GetPictureForRoomFull(id).Picture;
             return picture;
         }
 

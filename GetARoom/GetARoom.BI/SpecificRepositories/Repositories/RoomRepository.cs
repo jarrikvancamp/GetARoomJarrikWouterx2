@@ -18,7 +18,7 @@ namespace GetARoom.DAL.SpecificRepositories.Repositories
         {
             var rfh = _db.RoomForHotel.Where(x => x.HotelId == hotelId);
             var rooms = new List<Room>();
-            foreach (var room in rfh)
+            foreach (var room in rfh.ToList())
             {
                 rooms.Add(_db.Room.FirstOrDefault(x => x.RoomId == room.RoomId));
             }

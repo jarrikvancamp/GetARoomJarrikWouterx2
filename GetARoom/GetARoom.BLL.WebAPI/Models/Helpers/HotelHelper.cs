@@ -14,7 +14,7 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
     {
         private static HotelViewModel Hotel = new HotelViewModel();
         private static UnitOfWork unit = new UnitOfWork(new GetARoomEntities());
-
+        private static List<HotelViewModel> Hotels = new List<HotelViewModel>();
         public static HotelViewModel GetHotelViewModel(int id)
         {
           //  GetPicture(id);
@@ -24,17 +24,35 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
             return Hotel;
         }
 
+
+        public static IEnumerable<HotelViewModel> GetAllHotels()
+        {
+            var hotels = unit.Hotels.GetAllHotelsWithLocation().ToList();
+            foreach (var hotel in hotels)
+            {
+                Hotels.Add(GetHotelViewModel(hotel.HotelId));
+            }
+
+            return Hotels.ToList();
+        }
+
         private static void GetRating(int id)
         {
           var reviews =  GetReviewsForHotel(id);
             var total = 0;
             foreach (var rev in reviews)
             {
-                total += int.Parse(rev.ReviewScore);
+                total += int.Parse(rev.ReviewScore.Trim());
             }
+            if(reviews.Count()!= 0) { 
             var avg = total / reviews.Count();
 
             Hotel.Rating = avg;
+            }
+            else
+            {
+                Hotel.Rating = 3;
+            }
         }
 
         private static void GetLocation(int id)
@@ -56,7 +74,7 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
         {
             PictureForHotel pfh = unit.PicturesForHotel.GetPictureForHotelFullByHotelId(id);
 
-            Hotel.PicturePath = pfh.Picture.Path;
+            Hotel.Picture = pfh.Picture;
 
         }
 
@@ -103,16 +121,10 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
                             var rfb = unit.ReviewsForBooking.GetReviewForBookingFull(item.BookingId);
                             reviews.Add(unit.Reviews.GetById(rfb.ReviewId));
                         }catch(Exception e){
-
-                        }
-                        
-                      
+                        }                                            
                     }
-
-
                 }
             }
-
             return reviews;
         }
 

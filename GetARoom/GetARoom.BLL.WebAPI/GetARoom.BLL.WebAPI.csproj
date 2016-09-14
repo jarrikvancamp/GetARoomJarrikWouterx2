@@ -221,6 +221,7 @@
     <Compile Include="Controllers\GeolocationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\HotelViewController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Controllers\PictureController.cs" />
