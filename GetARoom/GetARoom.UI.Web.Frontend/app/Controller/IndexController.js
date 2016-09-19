@@ -7,7 +7,7 @@ function IndexController($http) {
     vm.items = [];
     function getItems() {
 
-        $http({ method: 'GET', url: 'http://localhost:61000/api/hotel' })
+        $http({ method: 'GET', url: 'http://localhost:61000/api/TopHotel?amount=3' })
             .success(function (data, status) {  
                 vm.items = data;
             })

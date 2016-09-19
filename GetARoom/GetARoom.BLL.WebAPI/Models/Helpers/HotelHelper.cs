@@ -80,29 +80,12 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
 
         public static IEnumerable<Hotel> GetTopHotels(int amount)
         {
-            var _hotels = unit.Hotels.GetAll().ToList();
-            var bookings = new List<Booking>();
-            foreach (var hotel in _hotels)
-            {
-                foreach (var rooms in GetListRooms(hotel.HotelId))
-                {
-                    foreach (var booking in GetListBooking(rooms.RoomId))
-                    {
-                        bookings.Add(booking);
-                    }
-                }
-            }
-
-            bookings.OrderBy(x => x.ReviewForBooking.OrderBy(y => y.Review.ReviewScore));
-            var top = new List<Hotel>();
-
-            for (int i = 0; i < amount; i++)
-            {
-                top.Add(_hotels[i]);
-            }
+            var _hotels = unit.Hotels.GetAll().OrderByDescending(x => x.HotelRating).Take(3);
+            
+            
 
 
-            return top;
+            return _hotels;
         }
 
         public static IEnumerable<Review> GetReviewsForHotel(int hotelId)

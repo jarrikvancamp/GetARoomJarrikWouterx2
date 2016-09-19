@@ -10,12 +10,12 @@ using System.Web.Http.Cors;
 
 namespace GetARoom.BLL.WebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TopHotelController : ApiController
     {
-        [EnableCors(origins: "*", headers: "*", methods: "*")]
-        public IEnumerable<Hotel> GetAll(int Id)
+        public IEnumerable<Hotel> GetAll(int amount)
         {
-            var hotels = HotelHelper.GetTopHotels(Id);
+            var hotels = HotelHelper.GetTopHotels(amount);
             return hotels;
         }
     }
