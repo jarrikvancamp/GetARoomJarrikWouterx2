@@ -15,7 +15,8 @@ namespace GetARoom.BLL.WebAPI.Controllers
     {
         public IEnumerable<Hotel> GetAll(int amount)
         {
-            var hotels = HotelHelper.GetTopHotels(amount);
+            var hotels = HotelHelper.GetTopHotels(amount).ToList();
+
             return hotels;
         }
     }

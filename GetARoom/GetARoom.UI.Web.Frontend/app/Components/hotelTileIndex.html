@@ -1,6 +1,6 @@
 ﻿
     <article class="hotelIndexArticle">
-        <img ng-src="{{$ctrl.hotel.fotoPad}}" alt="{{$ctrl.hotel.HotelName}}" />
+        <img ng-src="{{$ctrl.hotel.PicturePath}}" alt="{{$ctrl.hotel.HotelName}}" />
         <h5>{{$ctrl.hotel.HotelName}}</h5>
         <p>{{$ctrl.hotel.Location.Stad}}, {{$ctrl.hotel.Location.Land}} <i class="fa fa-map-marker" aria-hidden="true"></i></p>
         <div ng-init="y = 2">Rating: <span uib-rating ng-model="$ctrl.hotel.HotelRating" read-only="true" aria-labelledby="default-rating"></span></div>

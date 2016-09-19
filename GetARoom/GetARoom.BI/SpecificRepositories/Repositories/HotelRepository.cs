@@ -18,12 +18,12 @@ namespace GetARoom.DAL.SpecificRepositories.Repositories
 
         public IEnumerable<Hotel> GetAllHotelsWithLocation()
         {
-            return _db.Hotel.Include(x => x.Location);
+            return _db.Hotel.Include(x => x.Location).Include(x=>x.PictureForHotel);
         }
 
         public Hotel GetHotelWithLocation(int id)
         {
-            return _db.Hotel.Include(x => x.Location)
+            return _db.Hotel.Include(x => x.Location).Include(x => x.PictureForHotel)
                 .FirstOrDefault<Hotel>(c => c.HotelId == id);
 
         }

@@ -28,6 +28,7 @@ namespace GetARoom.DAL
         public string Phonenumber { get; set; }
         public string HotelDescription { get; set; }
         public Nullable<decimal> HotelRating { get; set; }
+        public string PicturePath { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AmenityForHotel> AmenityForHotel { get; set; }

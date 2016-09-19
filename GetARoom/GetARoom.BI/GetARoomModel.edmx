@@ -86,6 +86,7 @@
           <Property Name="Phonenumber" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="HotelDescription" Type="nvarchar" MaxLength="190" />
           <Property Name="HotelRating" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PicturePath" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
@@ -171,7 +172,7 @@
           <Key>
             <PropertyRef Name="ReviewForBookingId" />
           </Key>
-          <Property Name="ReviewForBookingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReviewForBookingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ReviewId" Type="int" Nullable="false" />
           <Property Name="BookingId" Type="int" Nullable="false" />
         </EntityType>
@@ -204,7 +205,7 @@
           <Key>
             <PropertyRef Name="RoomForHotelId" />
           </Key>
-          <Property Name="RoomForHotelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomForHotelId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="HotelId" Type="int" Nullable="false" />
           <Property Name="RoomId" Type="int" Nullable="false" />
           <Property Name="Amount" Type="int" Nullable="false" />
@@ -778,6 +779,7 @@
           <NavigationProperty Name="RoomForHotel" Relationship="GetARoomModel.FK_RoomForHotel_Hotel" FromRole="Hotel" ToRole="RoomForHotel" />
           <Property Name="HotelDescription" Type="String" MaxLength="190" FixedLength="false" Unicode="true" />
           <Property Name="HotelRating" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PicturePath" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
@@ -1491,6 +1493,7 @@
           <EntitySetMapping Name="Hotel">
             <EntityTypeMapping TypeName="GetARoomModel.Hotel">
               <MappingFragment StoreEntitySet="Hotel">
+                <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
                 <ScalarProperty Name="HotelRating" ColumnName="HotelRating" />
                 <ScalarProperty Name="HotelDescription" ColumnName="HotelDescription" />
                 <ScalarProperty Name="HotelId" ColumnName="HotelId" />
