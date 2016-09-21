@@ -161,7 +161,8 @@ namespace GetARoom.BLL.WebAPI.Models.Helpers
         {
 
             var rooms = unit.Rooms.GetAllForHotel(hotelId);
-
+            Hotel h = new Hotel();
+          
             return rooms;
         }
     }
